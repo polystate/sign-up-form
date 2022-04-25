@@ -1,7 +1,7 @@
 :root {
-  --main-margin: 5rem;
   --main-font-stack: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   --main-border-radius: 8px;
+  --image-width: 40%;
 }
 
 body {
@@ -15,16 +15,28 @@ body {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  background: black;
 }
 
 /*right content wrapper*/
 #right-content {
+  background-image: url("image2.jpg");
+  background-size: cover;
+  /* opacity: 0.5; */
+}
+
+img[src="image2.jpg"] {
+  opacity: 0.5;
+}
+
+#wrapper {
+  background: black;
+  opacity: 0.7;
   display: flex;
   flex-direction: column;
-  /* margin-top: var(--main-margin); */
-  /* padding: 0 5rem 0 5rem; */
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 #header {
@@ -34,7 +46,6 @@ body {
 
 /*form*/
 form {
-  /* margin-top: var(--main-margin); */
   border: 1px solid white;
   line-height: 3rem;
   width: 75%;
@@ -44,16 +55,46 @@ form {
 }
 
 /*text*/
+
+#text-panel {
+  position: absolute;
+  background: rgb(255, 0, 0);
+  background: black;
+  width: var(--image-width);
+  height: 8rem;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: var(--main-border-radius);
+}
+
+.img-text {
+  color: white;
+  /* display: inline; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: block;
+}
+
+img[src="odin-lined.png"] {
+  height: 75%;
+  width: 25%;
+  padding: 5rem 0 5rem 0;
+  background: black;
+}
+
 p {
-  /* margin: 0; */
   color: white;
   font-size: 2rem;
   font-family: var(--main-font-stack);
-  /* text-align: center; */
 }
 
 a {
   font-size: 2rem;
+}
+
+a:hover {
+  color: blue;
 }
 
 .aside {
@@ -62,7 +103,6 @@ a {
 
 label {
   color: white;
-  /* opacity: 0.8; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 0.25rem;
 }
@@ -74,16 +114,12 @@ input {
 }
 
 /*img*/
-img {
-  /* width: 40%; */
+img[src="image3.jpg"] {
   height: 100%;
   opacity: 0.75;
-  width: 40%;
+  width: var(--image-width);
+  opacity: 0.5;
 }
-
-/* img:hover {
-  opacity: 1;
-} */
 
 button {
   margin-left: 8rem;
