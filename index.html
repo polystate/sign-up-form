@@ -12,8 +12,11 @@
     <div id="main-content">
     <div id="text-panel">
       <img src="odin-lined.png">
+      
       <p>L U C I D</p>
+      <span>
       <p class="img-text">Wing Furniture</p>
+    </span>
     </div>
     <img src="image3.jpg" alt="Main sidebar image" />
     
@@ -25,7 +28,7 @@
           this in your life to help you realize your deepest dreams. Sign up
           <em>now</em> to get started.
         </p>
-        <p>You know you <em class="aside">want</em> to.</p>
+        <p>You know you <em><strong>want</em></strong> to.</p>
       </div>
       <form>
         <ul>
@@ -51,6 +54,7 @@
         <label for="phone">PHONE NUMBER</label>
       
         <input
+          pattern="(\d{3}([\-]\d{3}([\-])\d{4})?)"
           type="text"
           id="phone"
           name="phone"
@@ -69,12 +73,12 @@
         />
       </li>
       <li>
-        <label for="confirm">CONFIRM PASSWORD</label>
+        <label for="confirm">CONFIRM</label>
         <input
           type="password"
           id="confirm"
           name="confirm"
-          placeholder="Confirm"
+          placeholder="Confirm Password"
           required
         />
       </li>

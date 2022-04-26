@@ -1,20 +1,23 @@
 :root {
   --main-font-stack: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   --main-border-radius: 8px;
-  --image-width: 40%;
+  --image-width: 45%;
+  --font-size: 2rem;
 }
 
 body {
   padding: 0;
   margin: 0;
   background: black;
+  overflow: scroll;
 }
 
 /*main div wrapper*/
 #main-content {
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
+  height: fit-content;
   background: black;
 }
 
@@ -22,7 +25,6 @@ body {
 #right-content {
   background-image: url("image2.jpg");
   background-size: cover;
-  /* opacity: 0.5; */
 }
 
 img[src="image2.jpg"] {
@@ -35,13 +37,13 @@ img[src="image2.jpg"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 100%;
 }
 
 #header {
   text-align: center;
-  width: 50%;
+  width: 75%;
 }
 
 /*form*/
@@ -70,8 +72,7 @@ form {
 }
 
 .img-text {
-  color: white;
-  /* display: inline; */
+  color: gold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: block;
 }
@@ -85,12 +86,12 @@ img[src="odin-lined.png"] {
 
 p {
   color: white;
-  font-size: 2rem;
+  font-size: var(--font-size);
   font-family: var(--main-font-stack);
 }
 
 a {
-  font-size: 2rem;
+  font-size: var(--font-size);
 }
 
 a:hover {
@@ -115,10 +116,9 @@ input {
 
 /*img*/
 img[src="image3.jpg"] {
-  height: 100%;
-  opacity: 0.75;
   width: var(--image-width);
   opacity: 0.5;
+  background-size: cover;
 }
 
 button {
@@ -136,4 +136,37 @@ button {
 
 button:hover {
   background: forestgreen;
+}
+
+::placeholder {
+  padding-left: 5px;
+  letter-spacing: 2px;
+  color: black;
+  font-weight: 700;
+}
+
+/*media queries*/
+
+@media (max-width: 995px) {
+  #text-panel p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 860px) {
+  #text-panel p {
+    font-size: 1.5rem;
+  }
+  button {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 743px) {
+  #text-panel img {
+    width: 3rem;
+  }
+  button {
+    margin-left: 1rem;
+  }
 }
